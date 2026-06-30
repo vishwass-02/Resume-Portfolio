@@ -53,16 +53,10 @@ export const Navbar = () => {
         initial={{ y: -100 }}
         animate={{ y: 0 }}
         transition={{ duration: 0.5 }}
-        className={cn(
-          "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
-          isScrolled ? "py-4" : "py-6"
-        )}
+        className={`fixed w-full z-50 transition-all duration-300 ${isScrolled ? 'py-4' : 'py-6'}`}
       >
-        <div className="container mx-auto px-6">
-          <div className={cn(
-            "flex items-center justify-between transition-all duration-300 rounded-2xl px-6 py-3",
-            isScrolled ? "glass-panel bg-black/40 backdrop-blur-xl border border-white/10 shadow-[0_4px_30px_rgba(0,0,0,0.5)]" : "bg-transparent"
-          )}>
+        <div className="container mx-auto px-6 max-w-4xl">
+          <div className={`flex items-center justify-between px-6 py-3 rounded-full transition-all duration-500 ${isScrolled ? 'liquid-glass shadow-lg' : 'bg-transparent'}`}>
             <div className="text-xl font-bold font-outfit text-white tracking-widest cursor-pointer group" onClick={() => scrollTo("#home")}>
               VISHWAS<span className="text-[#0070f3] group-hover:text-[#00c6ff] transition-colors">.</span>S
             </div>
