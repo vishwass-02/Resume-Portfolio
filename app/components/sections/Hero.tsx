@@ -21,7 +21,7 @@ export const Hero = () => {
     whileInView: { filter: 'blur(0px)', opacity: 1, y: 0 },
     viewport: { once: true, amount: 0.1 },
     transition: { duration: 0.8, ease: 'easeOut' }
-  };
+  } as const;
 
   return (
     <section id="home" className="relative w-full h-screen overflow-hidden bg-black flex items-center justify-center">
